@@ -1,4 +1,4 @@
 [
-  { "name": "Accueil", "path": "/" },
-  { "name": "À propos", "path": "/about" }
+  { "label": "Accueil", "path": "/" },
+  { "label": "À propos", "path": "/about" }
 ]

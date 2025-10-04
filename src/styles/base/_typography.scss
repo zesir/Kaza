@@ -1,0 +1,94 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+// _typography.scss
+// =======================
+// Système typographique modulaire : tailles, poids, couleurs, transformations
+// =======================
+
+// -----------------------
+// Maps pour les styles
+// -----------------------
+$font-sizes: (
+  xl: 4.8rem,
+  lg: 3.6rem,
+  md: 2.4rem,
+  sm: 1.8rem,
+  xs: 1.2rem,
+);
+
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  black: 900,
+);
+
+$font-colors: (
+  light: #ffffff,
+  dark: #000000,
+  accent: #ff6060,
+  gray: #f6f6f6,
+);
+
+// -----------------------
+// Génération des classes
+// -----------------------
+
+// Tailles
+@each $size-name, $size-value in $font-sizes {
+  .font-#{$size-name} {
+    font-size: $size-value;
+  }
+}
+
+// Poids
+@each $weight-name, $weight-value in $font-weights {
+  .font-#{$weight-name} {
+    font-weight: $weight-value;
+  }
+}
+
+// Couleurs
+@each $color-name, $color-value in $font-colors {
+  .#{$color-name} {
+    color: $color-value;
+  }
+}
+
+// Transformations
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.italic {
+  font-style: italic;
+}
+
+// Espacement
+.tight {
+  letter-spacing: -0.02em;
+}
+.wide {
+  letter-spacing: 0.05em;
+}
+
+// Line-height utilitaires
+.lh-tight {
+  line-height: 1.2;
+}
+.lh-normal {
+  line-height: 1.5;
+}
+.lh-loose {
+  line-height: 1.8;
+}
