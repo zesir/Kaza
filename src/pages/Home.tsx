@@ -10,11 +10,12 @@ function Home() {
         <Banner image={bannerImg} titre="Chez vous, partout et ailleurs" />
         <div className="section-logement">
           <ul className="thumb-list">
-            {logements.map((logement) => (
+            {logements.map((logement, index) => (
               <Thumb
+                key={index}
                 image={logement.cover}
                 title={logement.title}
-                link={`/logement/:${logement.id}`}
+                link={`/logement/${logement.id}`}
               />
             ))}
           </ul>
