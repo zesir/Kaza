@@ -4,7 +4,7 @@ import { useState } from "react";
 
 type dropProps = {
   titre: string;
-  content: string;
+  content: React.ReactNode;
   open: boolean;
 };
 

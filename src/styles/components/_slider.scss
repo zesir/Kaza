@@ -1,0 +1,35 @@
+.slider-container {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .arrow-L {
+    cursor: pointer;
+    position: absolute;
+    left: 1rem;
+    .icon-chevron {
+      font-size: 4rem;
+      color: $light-color;
+    }
+  }
+  .arrow-R {
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    .icon-chevron {
+      font-size: 4rem;
+      color: $light-color;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

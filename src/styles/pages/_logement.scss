@@ -12,4 +12,11 @@
       display: flex;
     }
   }
+  .dropdown-container {
+    display: flex;
+    gap: 2rem;
+    .dropdown {
+      width: 50%;
+    }
+  }
 }

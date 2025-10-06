@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
+import Dropdown from "../components/Dropdown";
 import Host from "../components/Host";
 import Location from "../components/Location";
 import Stars from "../components/rating/Stars";
+import Slider from "../components/Slider";
 import Title from "../components/Title";
 import logements from "../data/logements.json";
 
@@ -18,6 +20,9 @@ function Logement() {
   return (
     <>
       <div className="wrapper">
+        <section className="section-slider">
+          <Slider pictures={logement.pictures} />
+        </section>
         <section className="section-details">
           <div className="logement-header">
             <Title titre={logement.title} />
@@ -26,6 +31,24 @@ function Logement() {
           <div className="logement-info">
             <Location location={logement.location} />
             <Stars rating={rating} />
+          </div>
+          <div className="dropdown-container">
+            <Dropdown
+              titre={"Description"}
+              open={false}
+              content={<p>{logement.description}</p>}
+            />
+            <Dropdown
+              titre={"Equipements"}
+              open={false}
+              content={
+                <ul>
+                  {logement.equipments.map((equipment) => (
+                    <li>{equipment}</li>
+                  ))}
+                </ul>
+              }
+            />
           </div>
         </section>
       </div>
