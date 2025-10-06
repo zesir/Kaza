@@ -8,7 +8,7 @@ function About() {
     <>
       <div className="wrapper">
         <Banner image={bannerImg} titre="" />
-        <div className="drop-wrapper">
+        <section className="drop-wrapper">
           {aboutContent.map((el, id) => (
             <Dropdown
               titre={el.titre}
@@ -17,7 +17,7 @@ function About() {
               open={false}
             />
           ))}
-        </div>
+        </section>
       </div>
     </>
   );

@@ -4,6 +4,7 @@ import Host from "../components/Host";
 import Location from "../components/Location";
 import Stars from "../components/rating/Stars";
 import Slider from "../components/Slider";
+import Tag from "../components/Tag";
 import Title from "../components/Title";
 import logements from "../data/logements.json";
 
@@ -25,11 +26,22 @@ function Logement() {
         </section>
         <section className="section-details">
           <div className="logement-header">
-            <Title titre={logement.title} />
+            <div className="logement-titles">
+              <Title titre={logement.title} />
+              <Location location={logement.location} />
+            </div>
+
             <Host name={host.name} picProfile={host.picture} />
           </div>
           <div className="logement-info">
-            <Location location={logement.location} />
+            <ul className="tag-list">
+              {logement.tags.map((el) => (
+                <li>
+                  <Tag tag={el} />
+                </li>
+              ))}
+            </ul>
+
             <Stars rating={rating} />
           </div>
           <div className="dropdown-container">

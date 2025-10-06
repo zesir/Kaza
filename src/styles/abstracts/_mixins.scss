@@ -6,3 +6,9 @@
     rgba(255, 255, 255, 0) 50%
   );
 }
+
+@mixin respond-to($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}

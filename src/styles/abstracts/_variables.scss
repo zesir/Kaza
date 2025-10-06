@@ -1,4 +1,13 @@
+//couleurs
 $accent-color: #ff6060;
 $light-color: #ffffff;
 $dark-color: #000000;
 $bg-color: #f6f6f6;
+//breakpoints
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1440px,
+);

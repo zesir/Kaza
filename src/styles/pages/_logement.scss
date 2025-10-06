@@ -8,15 +8,25 @@
   .logement-info {
     display: flex;
     justify-content: space-between;
-    .rating-list {
+    margin-top: 1rem;
+    .rating-list,
+    .tag-list {
       display: flex;
+      align-items: center;
     }
   }
   .dropdown-container {
     display: flex;
     gap: 2rem;
+    margin-top: 2rem;
+    @include respond-to("lg") {
+      flex-direction: column;
+    }
     .dropdown {
       width: 50%;
+      @include respond-to("lg") {
+        width: 100%;
+      }
     }
   }
 }

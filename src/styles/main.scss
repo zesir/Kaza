@@ -16,12 +16,16 @@
 @import "components/nav";
 @import "components/logo";
 @import "components/banner";
+@import "components/title";
+@import "components/tag";
 @import "components/dropdown";
 @import "components/thumb";
 @import "components/host";
 @import "components/star";
 @import "components/stars";
-@import "components/slider"; // 6. Pages
+@import "components/slider";
+
+// 6. Pages
 @import "pages/home";
 @import "pages/about";
 @import "pages/logement";

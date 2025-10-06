@@ -1,49 +1,50 @@
-.dropdown {
+.dropdown:not(:first-child):not(:last-child) {
   margin: 2rem 0;
-  .drop-label {
-    position: relative;
-    z-index: 10;
+}
+
+.drop-label {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  background-color: $accent-color;
+  cursor: pointer;
+  &__titre {
+    padding: 1rem;
+  }
+  &__chevron {
     display: flex;
-    justify-content: space-between;
-    border-radius: 0.5rem;
-    background-color: $accent-color;
-    cursor: pointer;
-    &__titre {
-      padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition: all 0.3s;
+    transform: rotate(0deg);
+    .icon-chevron {
+      color: $light-color;
+      font-size: 2.4rem;
     }
-    &__chevron {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-      transition: all 0.3s;
-      transform: rotate(0deg);
-      .icon-chevron {
-        color: $light-color;
-        font-size: 2.4rem;
-      }
-      &.rotate {
-        transform: rotate(-180deg); // ou -180deg si tu préfères
-      }
+    &.rotate {
+      transform: rotate(-180deg); // ou -180deg si tu préfères
     }
   }
-  .drop-content {
-    position: relative;
-    z-index: 5;
-    background-color: $bg-color;
-    transition: all 0.3s ease;
-    transform: translateY(-10px);
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
+}
+.drop-content {
+  position: relative;
+  z-index: 5;
+  background-color: $bg-color;
+  transition: all 0.3s ease;
+  transform: translateY(-10px);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
 
-    &__text {
-      padding: 1rem;
-    }
-    &.open {
-      transform: translateY(0);
-      opacity: 1;
-      max-height: 500px; // valeur suffisamment grande
-    }
+  &__text {
+    padding: 1rem;
+  }
+  &.open {
+    transform: translateY(0);
+    opacity: 1;
+    max-height: 500px; // valeur suffisamment grande
   }
 }
