@@ -49,4 +49,11 @@ ol {
   max-width: 1200px;
   width: 80%;
   margin: 4rem auto;
+  @include respond-to("lg") {
+    width: 90%;
+  }
+  @include respond-to("md") {
+    width: 100%;
+    padding: 0 2rem;
+  }
 }

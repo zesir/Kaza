@@ -15,7 +15,7 @@ function Dropdown({ titre, content, open = false }: dropProps) {
     <>
       <div className="dropdown">
         <div className="drop-label" onClick={() => setIsOpen(!isOpen)}>
-          <h2 className="drop-label__titre font-md font-bold light">{titre}</h2>
+          <h2 className="drop-label__titre font-sm font-bold light">{titre}</h2>
           <div className={`drop-label__chevron ${isOpen ? "rotate" : ""}`}>
             <FontAwesomeIcon icon={faChevronUp} className="icon-chevron" />
           </div>

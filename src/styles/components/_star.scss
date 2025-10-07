@@ -1,10 +1,22 @@
 .star {
   color: #e3e3e3; // gris clair pour les étoiles vides
-  font-size: 1.5rem;
+  font-size: 3rem;
   transition: color 0.3s ease;
+  @include respond-to("lg") {
+    font-size: 2rem;
+  }
+  @include respond-to("md") {
+    font-size: 1.5rem;
+  }
 
   &__filled {
-    color: gold; // rouge/rose pour les étoiles remplies
-    font-size: 1.5rem;
+    color: $accent-color; // rouge/rose pour les étoiles remplies
+    font-size: 3rem;
+    @include respond-to("lg") {
+      font-size: 2rem;
+    }
+    @include respond-to("md") {
+      font-size: 1.5rem;
+    }
   }
 }

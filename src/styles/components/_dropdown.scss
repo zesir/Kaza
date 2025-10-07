@@ -7,11 +7,19 @@
   z-index: 10;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-radius: 0.5rem;
   background-color: $accent-color;
   cursor: pointer;
   &__titre {
     padding: 1rem;
+    @include respond-to("lg") {
+      font-size: 1.5rem;
+      padding: 0.8rem;
+    }
+    @include respond-to("md") {
+      font-size: 1.3rem;
+    }
   }
   &__chevron {
     display: flex;
@@ -23,6 +31,12 @@
     .icon-chevron {
       color: $light-color;
       font-size: 2.4rem;
+      @include respond-to("lg") {
+        font-size: 1.8rem;
+      }
+      @include respond-to("md") {
+        font-size: 1.3rem;
+      }
     }
     &.rotate {
       transform: rotate(-180deg); // ou -180deg si tu préfères
@@ -41,6 +55,12 @@
 
   &__text {
     padding: 1rem;
+    @include respond-to("lg") {
+      font-size: 1.8rem;
+    }
+    @include respond-to("md") {
+      font-size: 1.3rem;
+    }
   }
   &.open {
     transform: translateY(0);

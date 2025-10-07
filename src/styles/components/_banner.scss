@@ -24,5 +24,11 @@
   h1 {
     position: absolute;
     z-index: 40;
+    @include respond-to("lg") {
+      font-size: 2.8rem;
+    }
+    @include respond-to("md") {
+      font-size: 2.4rem;
+    }
   }
 }

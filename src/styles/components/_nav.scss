@@ -4,6 +4,20 @@
     display: flex;
     gap: 3rem;
     align-items: center;
+    @include respond-to("lg") {
+      gap: 2.5rem;
+    }
+    @include respond-to("md") {
+      gap: 1.5rem;
+    }
+    a {
+      @include respond-to("lg") {
+        font-size: 1.8rem;
+      }
+      @include respond-to("md") {
+        font-size: 1.4rem;
+      }
+    }
   }
 }
 

@@ -1,6 +1,15 @@
 .tags {
-  display: inline-block;
+  display: inline-flex;
   padding: 0.5rem 3rem;
   background-color: $accent-color;
   border-radius: 2rem;
+  @include respond-to("lg") {
+    font-size: 1.2rem;
+  }
+  @include respond-to("md") {
+    font-size: 1rem;
+  }
+  @include respond-to("sm") {
+    flex-wrap: wrap;
+  }
 }

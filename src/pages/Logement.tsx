@@ -25,24 +25,25 @@ function Logement() {
           <Slider pictures={logement.pictures} />
         </section>
         <section className="section-details">
-          <div className="logement-header">
-            <div className="logement-titles">
-              <Title titre={logement.title} />
-              <Location location={logement.location} />
+          <div className="details">
+            <div className="logement-header">
+              <div className="logement-titles">
+                <Title titre={logement.title} />
+                <Location location={logement.location} />
+                <ul className="tag-list">
+                  {logement.tags.map((el) => (
+                    <li>
+                      <Tag tag={el} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
-            <Host name={host.name} picProfile={host.picture} />
-          </div>
-          <div className="logement-info">
-            <ul className="tag-list">
-              {logement.tags.map((el) => (
-                <li>
-                  <Tag tag={el} />
-                </li>
-              ))}
-            </ul>
-
-            <Stars rating={rating} />
+            <div className="logement-info">
+              <Host name={host.name} picProfile={host.picture} />
+              <Stars rating={rating} />
+            </div>
           </div>
           <div className="dropdown-container">
             <Dropdown

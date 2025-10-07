@@ -1,0 +1,11 @@
+.rating-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 3rem;
+  gap: 1.5rem;
+  @include respond-to("lg") {
+    width: 50%;
+    justify-content: flex-start;
+  }
+}
