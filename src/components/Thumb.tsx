@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 
-type thumbProps = {
+type Props = {
   image: string;
   title: string;
   link: string;
 };
 
-function Thumb({ image, title, link }: thumbProps) {
+function Thumb({ image, title, link }: Props) {
   return (
-    <>
       <li className="thumb">
         <Link to={link}>
           <img src={image} alt={title} />
@@ -17,7 +16,6 @@ function Thumb({ image, title, link }: thumbProps) {
           </div>
         </Link>
       </li>
-    </>
   );
 }
 

@@ -5,17 +5,16 @@ type NavLink = {
   label: string;
 };
 
-type NavProps = {
+type Props = {
   links: NavLink[];
 };
 
-function Nav({ links }: NavProps) {
+function Nav({ links }: Props) {
   return (
-    <>
       <nav className="nav">
         <ul className="nav__list">
-          {links.map((link, i) => (
-            <li key={i}>
+          {links.map((link) => (
+            <li key={link.path}>
               <NavLink
                 to={link.path}
                 className={({ isActive }) =>
@@ -28,7 +27,6 @@ function Nav({ links }: NavProps) {
           ))}
         </ul>
       </nav>
-    </>
   );
 }
 
