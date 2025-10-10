@@ -1,15 +1,14 @@
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import React, { useState } from "react";
 
-type dropProps = {
+type Props = {
   titre: string;
   content: React.ReactNode;
-  open: boolean;
 };
 
-function Dropdown({ titre, content, open = false }: dropProps) {
-  const [isOpen, setIsOpen] = useState(open);
+function Dropdown({ titre, content }: Props) {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>

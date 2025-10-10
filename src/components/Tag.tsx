@@ -1,13 +1,11 @@
-type tagProps = {
-  tag: string;
+type Props = {
+    tag: string;
 };
 
-function Tag({ tag }: tagProps) {
-  return (
-    <>
-      <span className="tags font-xs font-bold light">{tag}</span>
-    </>
-  );
+function Tag({ tag }: Props) {
+    return (
+        <span className="tags font-xs font-bold light">{tag}</span>
+    );
 }
 
 export default Tag;

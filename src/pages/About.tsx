@@ -5,21 +5,18 @@ import aboutContent from "../data/aboutContent.json";
 
 function About() {
   return (
-    <>
       <div className="wrapper">
-        <Banner image={bannerImg} titre="" />
-        <section className="drop-wrapper">
-          {aboutContent.map((el, id) => (
-            <Dropdown
-              titre={el.titre}
-              content={el.content}
-              key={id}
-              open={false}
-            />
-          ))}
-        </section>
+          <Banner image={bannerImg} titre="" />
+          <section className="drop-wrapper">
+              {aboutContent.map((el) => (
+                  <Dropdown
+                      titre={el.titre}
+                      content={el.content}
+                      key={el.titre}
+                  />
+              ))}
+          </section>
       </div>
-    </>
   );
 }
 export default About;

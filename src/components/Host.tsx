@@ -1,13 +1,12 @@
-type hostProps = {
+type Props = {
   name: string;
   picProfile: string;
 };
 
-function Host({ name, picProfile }: hostProps) {
+function Host({ name, picProfile }: Props) {
   const [firstName, lastName] = name.split(" ");
 
   return (
-    <>
       <div className="host">
         <div className="host__name">
           <h4 className="font-sm font-medium accent">{firstName}</h4>
@@ -18,7 +17,6 @@ function Host({ name, picProfile }: hostProps) {
           <img src={picProfile} className="profile__pic" />
         </div>
       </div>
-    </>
   );
 }
 export default Host;

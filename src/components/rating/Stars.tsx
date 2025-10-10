@@ -1,20 +1,18 @@
 import Star from "./Star";
 
-type starsProps = {
+type Props = {
   rating: string | number;
 };
 
-function Stars({ rating }: starsProps) {
+function Stars({ rating }: Props) {
   const numericRating = Number(rating);
 
   return (
-    <>
       <ul className="rating-list">
         {[...Array(5)].map((_, index) => (
           <Star key={index} filled={index < numericRating} />
         ))}
       </ul>
-    </>
   );
 }
 export default Stars;

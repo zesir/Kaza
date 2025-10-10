@@ -25,7 +25,6 @@ function Slider({ pictures }: sliderProps) {
   };
 
   return (
-    <>
       <div className="slider-container">
         <div className="arrow-L" onClick={handlePrev}>
           <FontAwesomeIcon icon={faChevronLeft} className="icon-chevron" />
@@ -40,7 +39,6 @@ function Slider({ pictures }: sliderProps) {
           <FontAwesomeIcon icon={faChevronRight} className="icon-chevron" />
         </div>
       </div>
-    </>
   );
 }
 export default Slider;
