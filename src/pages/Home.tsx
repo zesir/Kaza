@@ -5,21 +5,21 @@ import logements from "../data/logements.json";
 
 function Home() {
   return (
-      <div className="wrapper">
-          <Banner image={bannerImg} titre="Chez vous, partout et ailleurs" />
-          <div className="section-logement">
-              <ul className="thumb-list">
-                  {logements.map((logement) => (
-                      <Thumb
-                          key={logement.id}
-                          image={logement.cover}
-                          title={logement.title}
-                          link={`/logement/${logement.id}`}
-                      />
-                  ))}
-              </ul>
-          </div>
+    <div className="wrapper">
+      <Banner image={bannerImg} titre="Chez vous, partout et ailleurs" />
+      <div className="section-logement">
+        <ul className="thumb-list">
+          {logements.map((logement) => (
+            <Thumb
+              key={logement.id}
+              image={logement.cover}
+              title={logement.title}
+              link={`/logement/${logement.id}`}
+            />
+          ))}
+        </ul>
       </div>
+    </div>
   );
 }
 export default Home;

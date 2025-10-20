@@ -5,9 +5,9 @@ import Router from "./Router";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Kaza">
       <Header />
-      <Router /> {/* Ici toutes tes routes sont gérées */}
+      <Router />
       <Footer />
     </BrowserRouter>
   );
